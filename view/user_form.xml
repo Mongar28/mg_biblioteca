@@ -4,5 +4,8 @@ this repository contains the full copyright notices and license terms. -->
 <form>
     <label name="name"/>
     <field name="name"/>
-    <field name="receptionists"/>
+    <label name="status"/>
+    <field name="status"/>
+    <label name="cedula"/>
+    <field name="cedula"/>
 </form>

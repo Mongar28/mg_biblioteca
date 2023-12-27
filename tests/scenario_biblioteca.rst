@@ -29,5 +29,11 @@ Crear biblioteca::
     >>> biblioteca.receptionists
     [proteus.Model.get('mg.receptionist')(1), proteus.Model.get('mg.receptionist')(2)]
 
-    >>> user_one = biblioteca.users.new(name='Mongar',status='active', cedula ='11111111')
+Crear user::
 
+    >>> User = Model.get('mg.user')
+    >>> user = User()
+    >>> user.name = 'Mongar'
+    >>> user.save()
+    >>> user.status
+    'active'

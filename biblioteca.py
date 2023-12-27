@@ -8,5 +8,3 @@ class Biblioteca(ModelSQL, ModelView):
     name = fields.Char('Biblioteca')
     receptionists = fields.One2Many(
         'mg.receptionist', 'biblioteca', "Receptionist")
-    users = fields.One2Many(
-        'mg.user', 'biblioteca', "User")

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <record model="ir.action.act_window" id="act_user_tree">
+            <field name="name">user</field> 
+            <field name="res_model">mg.user</field> 
+        </record>
+        <record model="ir.ui.view" id="user_view_tree">
+            <field name="model">mg.user</field> 
+            <field name="type">tree</field>
+            <field name="name">user_tree</field>
+        </record>
+        <record model="ir.ui.view" id="user_view_form">
+            <field name="model">mg.user</field> 
+            <field name="type">form</field>
+            <field name="name">user_form</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_user_tree_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="user_view_tree"/>
+            <field name="act_window" ref="act_user_tree"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_user_form_view1">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="user_view_form"/>
+            <field name="act_window" ref="act_user_tree"/>
+        </record>
+        <menuitem
+        sequence = "10"
+        id = "menu_user"
+        action = "act_user_tree"/>
+    </data>
+</tryton>

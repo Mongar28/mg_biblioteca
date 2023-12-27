@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <record model="ir.action.act_window" id="act_receptionist_tree">
+            <field name="name">receptionist</field> 
+            <field name="res_model">mg.receptionist</field> 
+        </record>
+        <record model="ir.ui.view" id="receptionist_view_tree">
+            <field name="model">mg.receptionist</field> 
+            <field name="type">tree</field>
+            <field name="name">receptionist_tree</field>
+        </record>
+        <record model="ir.ui.view" id="receptionist_view_form">
+            <field name="model">mg.receptionist</field> 
+            <field name="type">form</field>
+            <field name="name">receptionist_form</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_receptionist_tree_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="receptionist_view_tree"/>
+            <field name="act_window" ref="act_receptionist_tree"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_receptionist_form_view1">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="receptionist_view_form"/>
+            <field name="act_window" ref="act_receptionist_tree"/>
+        </record>
+        <menuitem
+        sequence = "10"
+        id = "menu_receptionist"
+        action = "act_receptionist_tree"/>
+    </data>
+</tryton>
