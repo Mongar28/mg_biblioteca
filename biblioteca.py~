@@ -1,0 +1,6 @@
+from trytond.model import fields
+
+
+class Biblioteca():
+    __name__ = 'mg.biblioteca'
+    name = fields.Char('nombre_biblioteca')

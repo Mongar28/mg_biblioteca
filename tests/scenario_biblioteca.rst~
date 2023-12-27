@@ -1,0 +1,21 @@
+===================
+Biblioteca Scenario
+===================
+
+Imports::
+
+    >>> from proteus import Model, Wizard
+    >>> from trytond.tests.tools import activate_modules
+
+Activate modules::
+
+    >>> config = activate_modules('biblioteca')
+
+Crear biblioteca::
+
+    >>> Biblioteca = Model.get('mg.biblioteca')
+    >>> biblioteca = Biblioteca(name="biblio_diogenes")
+    >>> biblioteca.save()
+    >>> biblioteca.name
+    'biblio_diogenes'
+    

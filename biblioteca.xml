@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <record model="ir.action.act_window" id="act_biblioteca_tree">
+            <field name="name">Biblioteca</field> 
+            <field name="res_model">mg.biblioteca</field> 
+        </record>
+        <record model="ir.ui.view" id="biblioteca_view_tree">
+            <field name="model">mg.biblioteca</field> 
+            <field name="type">tree</field>
+            <field name="name">biblioteca_tree</field>
+        </record>
+        <record model="ir.ui.view" id="biblioteca_view_form">
+            <field name="model">mg.biblioteca</field> 
+            <field name="type">form</field>
+            <field name="name">biblioteca_form</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_biblioteca_tree_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="biblioteca_view_tree"/>
+            <field name="act_window" ref="act_biblioteca_tree"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_biblioteca_form_view1">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="biblioteca_view_form"/>
+            <field name="act_window" ref="act_biblioteca_tree"/>
+        </record>
+        <menuitem
+        sequence = "10"
+        id = "menu_biblioteca"
+        action = "act_biblioteca_tree"/>
+    </data>
+</tryton>

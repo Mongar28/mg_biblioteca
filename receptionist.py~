@@ -1,0 +1,6 @@
+from trytond.model import ModelSQL, ModelView
+
+
+class Receptionist(ModelSQL, ModelView):
+    "Receptionist"
+    __name__ = 'mg.receptionist'
